@@ -1,0 +1,15 @@
+server:
+  port: 8043
+  servlet:
+    contextPath: /water-monitor-service
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics,prometheus
+
+spring:
+  datasource:
+    #https://data.heroku.com/datastores/badd8c96-1661-4aa6-be58-5c97d9bc53af#administration    #jdbc:postgresql://<host>:<port>/<dbname>?sslmode=require&user=<username>&password=<password>
+    url: jdbc:postgresql://ec2-52-31-219-113.eu-west-1.compute.amazonaws.com:5432/d839f9utocukpj?sslmode=require&user=leedcsdusxkjwu&password=1c45b5556b69823e703b00c1a19865f512b253ec4f36bf00585158fcc0003e60
